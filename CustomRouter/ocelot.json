@@ -1,0 +1,51 @@
+﻿{
+  "Routes": [
+    // PRIMARY SOLUTION ROUTERS
+
+    {
+      "DownstreamPathTemplate": "/api/v1/common/{url}",
+      "DownstreamScheme": "http",
+      "FileCacheOptions": { "TtlSeconds": 15 },
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "104.238.103.48",
+          "Port": "72"
+        }
+      ],
+      "UpstreamPathTemplate": "/common/{url}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/pandp/api/v1/{url}",
+      "DownstreamScheme": "http",
+      "FileCacheOptions": { "TtlSeconds": 15 },
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "104.238.103.48",
+          "Port": "73"
+        }
+        //{
+        //  "Host": "localhost",
+        //  "Port": "5174"
+        //}
+      ],
+      "UpstreamPathTemplate": "/pand/{url}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "http://104.238.103.48:73"
+    //"BaseUrl": "localhost:30909"
+  }
+}
+
+
+
+ 

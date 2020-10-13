@@ -1,0 +1,118 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-App-C9B5F1F1-8FB8-4D1C-8A44-8880679AF93C</UserSecretsId>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <NeutralLanguage></NeutralLanguage>
+    <FileVersion>1.0.0.1</FileVersion>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Handlers\URI\**" />
+    <Compile Remove="MailHandler\**" />
+    <Content Remove="Handlers\URI\**" />
+    <Content Remove="MailHandler\**" />
+    <EmbeddedResource Remove="Handlers\URI\**" />
+    <EmbeddedResource Remove="MailHandler\**" />
+    <None Remove="Handlers\URI\**" />
+    <None Remove="MailHandler\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20200515015957_ExtendedIdentityUser.cs" />
+    <Compile Remove="Data\Migrations\20200515015957_ExtendedIdentityUser.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200602011132_SupplierObj.cs" />
+    <Compile Remove="Data\Migrations\20200602011132_SupplierObj.Designer.cs" />
+    <Compile Remove="DomainObjects\Auth\AuthenticationResult.cs" />
+    <Compile Remove="GenericRepository.cs" />
+    <Compile Remove="Handlers\Purchase\Bids_and_tender\GetBidAdvertsQueryHandler.cs" />
+    <Compile Remove="Handlers\Purchase\LPOs\LPOStaffApprovalCommandHandler - Copy.cs" />
+    <Compile Remove="Handlers\Purchase\Payment_proposals\UpdatePaymentCommandHandler.cs" />
+    <Compile Remove="IGenericRepository.cs" />
+    <Compile Remove="Migrations\20200611161422_modifiedTaxType.cs" />
+    <Compile Remove="Migrations\20200611161422_modifiedTaxType.Designer.cs" />
+    <Compile Remove="Migrations\20200611161721_modifiedTaxType.cs" />
+    <Compile Remove="Migrations\20200611161721_modifiedTaxType.Designer.cs" />
+    <Compile Remove="Migrations\20200611162202_modifiedTaxType.cs" />
+    <Compile Remove="Migrations\20200611162202_modifiedTaxType.Designer.cs" />
+    <Compile Remove="Migrations\20200611162335_modified.cs" />
+    <Compile Remove="Migrations\20200611162335_modified.Designer.cs" />
+    <Compile Remove="Migrations\20200617124651_UserManager.cs" />
+    <Compile Remove="Migrations\20200617124651_UserManager.Designer.cs" />
+    <Compile Remove="Migrations\20200623080808_AddedTokenDetailsTableq.cs" />
+    <Compile Remove="Migrations\20200623080808_AddedTokenDetailsTableq.Designer.cs" />
+    <Compile Remove="Migrations\20200818083428_weqwer.cs" />
+    <Compile Remove="Migrations\20200818083428_weqwer.Designer.cs" />
+    <Compile Remove="Migrations\20200818084732_weqwers.cs" />
+    <Compile Remove="Migrations\20200818084732_weqwers.Designer.cs" />
+    <Compile Remove="Migrations\20200825103136_okplawq.cs" />
+    <Compile Remove="Migrations\20200825103136_okplawq.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="EPPlus" Version="5.1.2" />
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.4" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.1" />
+    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1003" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
+    <PackageReference Include="NLog" Version="4.7.2" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="Steeltoe.Discovery.ClientCore" Version="2.4.4" />
+    <PackageReference Include="Support.SDK" Version="1.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.4.1" />
+    <PackageReference Include="Syncfusion.DocIO.Net.Core" Version="18.2.0.59" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.1" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Contracts\Puchase_and_payables.Contracts.csproj" />
+    <ProjectReference Include="..\App.Helper\Puchase_and_payables.Helper.csproj" />
+  </ItemGroup>
+
+
+  <!--<ItemGroup>
+    <Reference Include="GOSLibraries">
+      <HintPath>..\..\..\..\..\Desktop\Gos_Nuggets\GOSLibraries.dll</HintPath>
+    </Reference>
+  </ItemGroup>-->
+
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Images\" />
+    <Folder Include="wwwroot\Files\" />
+    <Folder Include="wwwroot\Resources\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="GOSLibraries">
+      <HintPath>Lib\GOSLibraries.dll</HintPath>
+    </Reference>
+    <Reference Include="Support.SDK">
+      <HintPath>Lib\Support.SDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
